@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العقارات</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="MyFunctions.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+       <h1><nav>
+            <ul>
+                <li><a href="html.Properties">العقارات</a></li>
+                <li><a href="html.AboutUs">من نحن</a></li>
+                <li><a href="html.home">الصفحة الرئيسية</a></li>
+            </ul>
+        </nav></h1>
+    </header>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>المدينة</th>
+                        <th>تفاصيل</th>
+                        <th>الإيجار الشهري</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>اختيار</th>
+                    </tr>
+                </thead>
+                <tbody id="property-list">
+                    <tr>
+                        <td>دمشق</td>
+                        <td>شقة غرفتان وصالة مساحة 180 متر </td>
+                        <td> 450,000.000 ل,س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            
+                                <h5><b>المنطقة:ركن_الدين</b> <b>الطابق_الثاني</b> <b> الملكية:طابو_أخضر</b></h5>
+
+                                <nav class="photo">
+                                    <nav class="photo_1"><img src="images/1.jpg"></nav>
+                                    <nav class="photo_2"><img src="images/2.jpg"></nav>
+                                    <nav class="photo_3"><img src="images/3.jpg"></nav>
+                                 </nav>
+                         
+                                <h5><b>بلكون:مساحة10متر</b> <b>إكساء_جيد</b> <b>متوفر_كراج</b></h5> 
+                                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>حمص</td>
+                        <td>شقة مساحة 300 متر</td>
+                        <td>700,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                            <h5><b>المنطقة:الساعة_الجديدة</b> <b>الطابق_أول</b> <b>الملكية:طابو_أخضر</b></h5>
+
+                            <nav class="photo">
+                                <nav class="photo_1"><img src="images/4.jpg"></nav>
+                                <nav class="photo_2"><img src="images/5.jpg"></nav>
+                                <nav class="photo_3"><img src="images/6.jpg"></nav>
+                             </nav>
+
+                            <h5><b>موقع_ممتاز</b> <b>إطلالة_على_الشارع_الرأيسي</b> <b>متوفر_مصعد_و_كراج</b></h5>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>دمشق</td>
+                        <td>شقة فارغة غرفتين وصالة 110 متر</td>
+                        <td>250,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                           <h5><b>المنطقة:المزة</b> <b>الطابق_الثالث</b> <b>الملكية:طابو_أخضر</b></h5>
+
+                           <nav class="photo">
+                            <nav class="photo_1"><img src="images/7.jpg"></nav>
+                            <nav class="photo_2"><img src="images/8.jpg"></nav>
+                            <nav class="photo_3"><img src="images/9.jpg"></nav>
+                         </nav>
+                        
+                           <h5><b>إكساء_عادي</b> <b>متوفر_مصعد</b> <b>إطلالة_جميلة</b></h5>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>حمص</td>
+                        <td>شقة غرفتين وصالة مساحة 100 متر</td>
+                        <td>200,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                            <h5><b>المنطقة:الحضارة</b> <b>الطابق_الرابع</b> <b>الملكية:طابو_أخضر</b></h5>
+
+                            <nav class="photo">
+                                <nav class="photo_1"><img src="images/10.jpg"></nav>
+                                <nav class="photo_2"><img src="images/11.jpg"></nav>
+                                <nav class="photo_3"><img src="images/12.jpg"></nav>
+                             </nav>
+                            
+                            <h5><b>إكساء_ممتاز</b> <b>متوفر_كراج</b> <b>إطلالة_مميزة</b></h5>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>حلب</td>
+                        <td>شقة غرفتان وصالة مساحة 120 متر</td>
+                        <td>450,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                            <h5><b>المنطقة:الجميلية</b> <b>الطابق_الخامس</b> <b>الملكية:طابو_أخضر</b></h5>
+
+                            <nav class="photo">
+                                <nav class="photo_1"><img src="images/13.jpg"></nav>
+                                <nav class="photo_2"><img src="images/14.jpg"></nav>
+                                <nav class="photo_3"><img src="images/15.jpg"></nav>
+                             </nav>
+
+                            <h5><b>بلكون:مساحة10متر </b> <b>متوفر_مصعد</b> <b>إطلالة_على_الحديقة</b></h5>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>اللاذقية</td>
+                        <td>شقة غرفة وصالة مساحة 80 متر</td>
+                        <td>350,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                            <h5><b>المنطقة:المشروع_العاشر</b> <b>الطابق_الثالث</b> <b>الملكية:طابو_أخضر</b>
+
+                                <nav class="photo">
+                                    <nav class="photo_1"><img src="images/16.jpg"></nav>
+                                    <nav class="photo_2"><img src="images/17.jpg"></nav>
+                                    <nav class="photo_3"><img src="images/18.jpg"></nav>
+                                 </nav>
+
+                            <h5><b>إكساء_ملكي</b> <b>متوفر_كراج</b> <b>إطلالة_بحرية</b></h5>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>طرطوس</td>
+                        <td>شقة غرفتان وصالة مساحة 190 متر</td>
+                        <td>450,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                            <h5><b>المنطقة:حي_الزهور</b> <b>الطابق_الثاني</b> <b>الملكية:طابو_أخضر</b></h5>
+
+                            <nav class="photo">
+                                <nav class="photo_1"><img src="images/19.jpg"></nav>
+                                <nav class="photo_2"><img src="images/20.jpg"></nav>
+                                <nav class="photo_3"><img src="images/21.jpg"></nav>
+                             </nav>
+
+                            <h5><b>إكساء_جيد_جدا</b> <b>متوفر_مصعد</b> <b>إطلالة_على_الحديقة</b>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>درعا</td>
+                        <td>شقة غرفتان وصالة مساحة 110 متر</td>
+                        <td>300,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                            <h5><b>المنطقة:طريق_السد</b> <b>الطابق_الأرضي</b> <b>الملكية:طابو_أخضر</b></h5>
+
+                            <nav class="photo">
+                                <nav class="photo_1"><img src="images/22.jpg"></nav>
+                                <nav class="photo_2"><img src="images/23.jpg"></nav>
+                                <nav class="photo_3"><img src="images/24.jpg"></nav>
+                             </nav>
+
+                            <h5><b>إكساء_ممتاز</b> <b>متوفر_كراج</b> <b>إطلالة_على_البحر</b></h5>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>القنيطرة</td>
+                        <td>شقة غرفتان وصالة مساحة 100 متر</td>
+                        <td>200,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                           <h5><b>المنطقة:مجدل_شمس</b> <b>الطابق_الأول</b> <b>الملكية:_طابو_أخضر</b>
+
+                            <nav class="photo">
+                                <nav class="photo_1"><img src="images/25.jpg"></nav>
+                                <nav class="photo_2"><img src="images/26.jpg"></nav>
+                                <nav class="photo_3"><img src="images/27.jpg"></nav>
+                             </nav>
+
+                           <h5><b>إكساء_ممتاز</b> <b>متوفر_كراج</b> <b>إطلالة_جبلية</b></h5>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>حمص</td>
+                        <td>شقة غرفة وصالة مساحة 280 متر</td>
+                        <td>600,000,000 ل.س</td>
+                        <td><button onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" name="property"></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+
+                            <h5><b>المنطقة:الإنشائات</b> <b>الطابق_الثالث</b> <b>الملكية:طابو_أخضر</b>
+
+                                <nav class="photo">
+                                    <nav class="photo_1"><img src="images/28.jpg"></nav>
+                                    <nav class="photo_2"><img src="images/29.jpg"></nav>
+                                    <nav class="photo_3"><img src="images/30.jpg"></nav>
+                                 </nav>
+
+                            <h5><b>إكساء_ملكي</b> <b>متوفر_كراج</b> <b>إطلالة_على_جامع</b></h5>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <button id="bt" onclick="showForm()">متابعة</button>
+        <section id="application-form" style="display:none;">
+            <form onsubmit="submitForm(event)">
+                <label for="fullName">: الإسم الكامل</label>
+                <input type="text" id="full Name" name="fullName" pattern="^[\u0600-\u06FF\s]+$" placeholder="Full name">
+                
+                <label for="nationalId">: الرقم الوطني</label>
+                <input type="text" id="nationalId" name="nationalId" required pattern="^\d{11}$" placeholder="11 Column">
+                
+                <label for="birthDate">: تاريخ الولادة</label>
+                <input type="date" id="birthDate" name="birthDate">
+                
+                <label for="mobileNumber">: رقم الهاتف </label>
+                <input type="text" id="mobileNumber" name="mobileNumber" pattern="^09[1-9]\d{7}$"  placeholder="Siryatel or Mtn">
+                
+                <label for="email">: الإيميل</label>
+                <input type="email" id="email" name="email" placeholder="examble@gmail.com">
+                
+                <b id="cap">: الكابتشا</b>
+                <div id="captcha-container"></div>
+                <input type="text" id="captcha" name="captcha" required placeholder="أدخل الكابتشا">
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>العقارات</p>
+    </footer>
+</body>
+</html>
